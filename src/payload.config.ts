@@ -144,9 +144,10 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3000',
+  serverURL: 'http://localhost:3001',
   cors: [
     'http://localhost:3001',
+    'http://localhost:3000',
     'https://rebar-x.vercel.app',
     'https://www.rebarx.in',
     'https://rebarx.in',

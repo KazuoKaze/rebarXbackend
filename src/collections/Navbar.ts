@@ -56,6 +56,10 @@ const Navbar: CollectionConfig = {
         { name: 'url', type: 'text', required: true },
       ],
     },
+    {
+      name: 'phone',
+      type: 'text',
+    },
   ],
 }
 

@@ -153,6 +153,7 @@ export interface Navbar {
         id?: string | null;
       }[]
     | null;
+  phone?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -339,6 +340,13 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'vision-section';
+          }
+        | {
+            title: string;
+            subheading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'calculator';
           }
         | {
             sectionTitle: string;
@@ -639,6 +647,7 @@ export interface NavbarSelect<T extends boolean = true> {
         url?: T;
         id?: T;
       };
+  phone?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -781,6 +790,14 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               description?: T;
+              id?: T;
+              blockName?: T;
+            };
+        calculator?:
+          | T
+          | {
+              title?: T;
+              subheading?: T;
               id?: T;
               blockName?: T;
             };
